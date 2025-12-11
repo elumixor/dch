@@ -1,5 +1,5 @@
 import React from "react";
-import { formatTime } from "../../lib/utils/formatTime";
+import { formatTime } from "../../utils/formatTime";
 
 interface TimerDisplayProps {
 	remainingTime: number;
