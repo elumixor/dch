@@ -9,9 +9,9 @@ export default function Page01() {
 		<NavigationProvider config={{ prev: "index", next: "page02" }}>
 			<div className="page-container">
 				<header className="page-header">
-					<img src="/images/img02.png" alt="Header" />
+					<img src="/dch/images/img02.png" alt="Header" />
 					<img
-						src="/images/img_01.jpg"
+						src="/dch/images/img_01.jpg"
 						alt="Dharma Wheel"
 						style={{ width: "150px" }}
 					/>

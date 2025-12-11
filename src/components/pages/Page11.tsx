@@ -10,7 +10,7 @@ export default function Page11() {
 			<div className="page-container">
 				<header className="page-header">
 					<img
-						src="/images/img_01.jpg"
+						src="/dch/images/img_01.jpg"
 						alt="Dharma Wheel"
 						style={{ width: "150px" }}
 					/>

@@ -10,7 +10,7 @@ export default function Page08() {
 			<div className="page-container">
 				<header className="page-header">
 					<img
-						src="/images/img_01.jpg"
+						src="/dch/images/img_01.jpg"
 						alt="Dharma Wheel"
 						style={{ width: "150px" }}
 					/>
@@ -33,7 +33,7 @@ export default function Page08() {
 					</p>
 
 					<img
-						src="/images/img03.png"
+						src="/dch/images/img03.png"
 						alt="Footer"
 						style={{ marginTop: "3rem" }}
 					/>

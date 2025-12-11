@@ -10,11 +10,11 @@ export default function Page03() {
 			<div className="page-container">
 				<header className="page-header">
 					<img
-						src="/images/img_01.jpg"
+						src="/dch/images/img_01.jpg"
 						alt="Dharma Wheel"
 						style={{ width: "150px" }}
 					/>
-					<img src="/images/img02.png" alt="Header" />
+					<img src="/dch/images/img02.png" alt="Header" />
 					<h1 className="page-title">{t("page03.title")}</h1>
 				</header>
 
@@ -37,7 +37,7 @@ export default function Page03() {
 					</p>
 					<p>{t("page03.meaning")}</p>
 					<img
-						src="/images/img03.png"
+						src="/dch/images/img03.png"
 						alt="Footer"
 						style={{ marginTop: "2rem" }}
 					/>

@@ -11,7 +11,7 @@ export default function IndexPage() {
 		<NavigationProvider config={{ next: "page01" }}>
 			<div className="page-container">
 				<header className="page-header">
-					<img src="/images/img_01.jpg" alt="Dharma Wheel" />
+					<img src="/dch/images/img_01.jpg" alt="Dharma Wheel" />
 					<h1 className="page-title">{t("index.title")}</h1>
 					<p className="page-subtitle">{t("index.subtitle")}</p>
 				</header>

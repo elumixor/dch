@@ -6,7 +6,7 @@ export default function LandingPage() {
 		<div className="container landing-container">
 			<h1 className="landing-title">AM</h1>
 			<img
-				src="/images/img_01.jpg"
+				src="/dch/images/img_01.jpg"
 				alt="Dharma Wheel"
 				className="landing-logo"
 			/>
