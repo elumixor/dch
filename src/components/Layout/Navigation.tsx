@@ -1,6 +1,5 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { useScrollVisibility } from "../../hooks/useScrollVisibility";
 
 export interface NavigationConfig {
@@ -9,24 +8,49 @@ export interface NavigationConfig {
 	home?: string;
 }
 
+interface NavigationContextType {
+	config: NavigationConfig;
+	setConfig: (config: NavigationConfig) => void;
+}
+
 // Context to pass navigation config from pages to Navigation component
-const NavigationContext = createContext<NavigationConfig>({});
+const NavigationContext = createContext<NavigationContextType>({
+	config: {},
+	setConfig: () => {},
+});
 
 export const NavigationProvider: React.FC<{
 	children: React.ReactNode;
 	config: NavigationConfig;
-}> = ({ children, config }) => (
-	<NavigationContext.Provider value={config}>
-		{children}
-	</NavigationContext.Provider>
-);
+}> = ({ children, config: initialConfig }) => {
+	const [config, setConfig] = useState<NavigationConfig>(initialConfig);
+
+	return (
+		<NavigationContext.Provider value={{ config, setConfig }}>
+			{children}
+		</NavigationContext.Provider>
+	);
+};
 
 export function useNavigationConfig() {
-	return useContext(NavigationContext);
+	return useContext(NavigationContext).config;
+}
+
+export function useSetNavigationConfig() {
+	return useContext(NavigationContext).setConfig;
+}
+
+// Hook for pages to set their navigation config
+export function usePageNavigation(config: NavigationConfig) {
+	const setConfig = useSetNavigationConfig();
+
+	useEffect(() => {
+		setConfig(config);
+		return () => setConfig({});
+	}, [config.prev, config.next, config.home, setConfig]);
 }
 
 export default function Navigation() {
-	const { t } = useTranslation("common");
 	const { lang } = useParams<{ lang: string }>();
 	const config = useNavigationConfig();
 	const isVisible = useScrollVisibility();
@@ -41,15 +65,15 @@ export default function Navigation() {
 		>
 			{config.prev && (
 				<Link to={`/${lang}/${config.prev}`} className="nav-button nav-prev">
-					← {t("navigation.previous")}
+					<img src="/dch/images/right.png" alt="Previous" className="nav-arrow nav-arrow-left" />
 				</Link>
 			)}
 			<Link to={`/${lang}/${home}`} className="nav-button nav-home">
-				🏠 {t("navigation.home")}
+				<img src="/dch/images/home.png" alt="Home" className="nav-home-icon" />
 			</Link>
 			{config.next && (
 				<Link to={`/${lang}/${config.next}`} className="nav-button nav-next">
-					{t("navigation.next")} →
+					<img src="/dch/images/right.png" alt="Next" className="nav-arrow nav-arrow-right" />
 				</Link>
 			)}
 		</div>

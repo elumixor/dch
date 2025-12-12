@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Outlet, useParams, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import LanguagePicker from "./LanguagePicker";
-import FullscreenToggle from "./FullscreenToggle";
-import Navigation from "./Navigation";
+import { NavigationProvider } from "./Navigation";
+import TopBar from "./TopBar";
+import "./Layout.css";
 
 export default function Layout() {
 	const { lang } = useParams<{ lang: string }>();
@@ -24,11 +24,13 @@ export default function Layout() {
 	}
 
 	return (
-		<>
-			<FullscreenToggle />
-			<LanguagePicker />
-			<Outlet />
-			<Navigation />
-		</>
+		<NavigationProvider config={{}}>
+			<div className="layout-wrapper">
+				<div className="layout-content">
+					<TopBar />
+					<Outlet />
+				</div>
+			</div>
+		</NavigationProvider>
 	);
 }

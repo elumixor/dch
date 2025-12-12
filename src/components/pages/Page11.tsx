@@ -1,19 +1,15 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { NavigationProvider } from "../Layout/Navigation";
+import { usePageNavigation } from "../Layout/Navigation";
 
 export default function Page11() {
 	const { t } = useTranslation("pages");
 
+	usePageNavigation({ prev: "page10" });
+
 	return (
-		<NavigationProvider config={{ prev: "page10" }}>
-			<div className="page-container">
+		<div className="page-container">
 				<header className="page-header">
-					<img
-						src="/dch/images/img_01.jpg"
-						alt="Dharma Wheel"
-						style={{ width: "150px" }}
-					/>
 					<h1 className="page-title">{t("page11.title")}</h1>
 				</header>
 
@@ -42,6 +38,5 @@ export default function Page11() {
 					</p>
 				</main>
 			</div>
-		</NavigationProvider>
 	);
 }

@@ -1,13 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { NavigationProvider } from "../Layout/Navigation";
+import { usePageNavigation } from "../Layout/Navigation";
 
 export default function Page09() {
 	const { t } = useTranslation("pages");
 
+	usePageNavigation({ prev: "page08", next: "page10" });
+
 	return (
-		<NavigationProvider config={{ prev: "page08", next: "page10" }}>
-			<div className="page-container">
+		<div className="page-container">
 				<header className="page-header">
 					<h1 className="page-title">{t("page09.title")}</h1>
 					<p className="page-subtitle">{t("page09.subtitle")}</p>
@@ -27,6 +28,5 @@ export default function Page09() {
 					</p>
 				</main>
 			</div>
-		</NavigationProvider>
 	);
 }

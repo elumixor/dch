@@ -1,0 +1,97 @@
+/* Common icon button style */
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  opacity: 0.3;
+}
+
+.icon-button img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.icon-button:hover:not(.disabled) {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.icon-button.disabled {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.icon-button:focus,
+.icon-button:focus-visible {
+  outline: none;
+}
+
+/* Top Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 1000;
+  background: transparent;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.top-bar.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.top-bar.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Left Section */
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.top-bar-home img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Center Section */
+.top-bar-center {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+/* Arrow direction transforms */
+.nav-arrow-left {
+  transform: scaleX(-1);
+}
+
+/* Right Section */
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}

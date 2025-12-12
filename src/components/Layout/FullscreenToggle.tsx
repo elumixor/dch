@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useFullscreen } from "../../hooks/useFullscreen";
+import "./TopBar.css";
 
 export default function FullscreenToggle() {
 	const { t } = useTranslation("common");
@@ -16,14 +17,13 @@ export default function FullscreenToggle() {
 		: t("fullscreen.enter");
 
 	return (
-		<button
+		<div
 			id="fullscreen-toggle"
-			className="fullscreen-toggle"
+			className="icon-button"
 			onClick={toggle}
 			title={title}
-			type="button"
 		>
-			{title}
-		</button>
+			<img src="/dch/images/fullscreen.png" alt={title} />
+		</div>
 	);
 }

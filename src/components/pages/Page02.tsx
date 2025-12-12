@@ -1,11 +1,9 @@
 import React from "react";
-import { NavigationProvider } from "../Layout/Navigation";
+import { usePageNavigation } from "../Layout/Navigation";
 import MeditationTimer from "../Timer/MeditationTimer";
 
 export default function Page02() {
-	return (
-		<NavigationProvider config={{ prev: "page01", next: "page03" }}>
-			<MeditationTimer durationMinutes={30} />
-		</NavigationProvider>
-	);
+	usePageNavigation({ prev: "page01", next: "page03" });
+
+	return <MeditationTimer durationMinutes={30} />;
 }
