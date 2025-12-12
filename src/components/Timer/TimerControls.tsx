@@ -16,7 +16,7 @@ export default function TimerControls({ isRunning, onStart, onStop, onReset }: T
       className="timer-controls"
       style={{
         display: "flex",
-        gap: "2rem",
+        gap: "1rem",
         flexWrap: "wrap",
         justifyContent: "center",
       }}

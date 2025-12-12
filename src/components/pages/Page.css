@@ -14,15 +14,14 @@
 /* Title section at the top */
 .page-header {
   text-align: center;
-  margin-bottom: 2rem;
   width: 100%;
 }
 
 .page-title {
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 600;
   color: #ffffff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .page-subtitle {
@@ -43,7 +42,10 @@
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  &:first-child {
+    justify-content: flex-end;
+  }
 }
 
 .page-side-image img {
