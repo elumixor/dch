@@ -1,0 +1,78 @@
+/* Common button styles used across the app */
+
+/* Icon button style - used in navigation, top bar, language picker */
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  opacity: 0.3;
+}
+
+.icon-button img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.icon-button:hover:not(.disabled) {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.icon-button.disabled {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.icon-button:focus,
+.icon-button:focus-visible {
+  outline: none;
+}
+
+/* Timer control buttons */
+.timer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  opacity: 0.3;
+  color: white;
+  font-size: 1rem;
+}
+
+.timer-button:hover:not(:disabled) {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.timer-button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.timer-button:focus,
+.timer-button:focus-visible {
+  outline: none;
+}
+
+/* Timer button icon */
+.timer-button-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

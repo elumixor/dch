@@ -1,49 +1,71 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
+import "../../styles/buttons.css";
 
 interface TimerControlsProps {
-	isRunning: boolean;
-	onStart: () => void;
-	onStop: () => void;
-	onReset: () => void;
+  isRunning: boolean;
+  onStart: () => void;
+  onStop: () => void;
+  onReset: () => void;
 }
 
-export default function TimerControls({
-	isRunning,
-	onStart,
-	onStop,
-	onReset,
-}: TimerControlsProps) {
-	const { t } = useTranslation("timer");
+export default function TimerControls({ isRunning, onStart, onStop, onReset }: TimerControlsProps) {
+  const { t } = useTranslation("timer");
 
-	return (
-		<div className="timer-controls">
-			<button
-				id="start-btn"
-				className="timer-button start"
-				onClick={onStart}
-				disabled={isRunning}
-				type="button"
-			>
-				{t("controls.start")}
-			</button>
-			<button
-				id="stop-btn"
-				className="timer-button stop"
-				onClick={onStop}
-				disabled={!isRunning}
-				type="button"
-			>
-				{t("controls.stop")}
-			</button>
-			<button
-				id="reset-btn"
-				className="timer-button reset"
-				onClick={onReset}
-				type="button"
-			>
-				{t("controls.reset")}
-			</button>
-		</div>
-	);
+  return (
+    <div
+      className="timer-controls"
+      style={{
+        display: "flex",
+        gap: "2rem",
+        flexWrap: "wrap",
+        justifyContent: "center",
+      }}
+    >
+      {isRunning ? (
+        <button
+          id="stop-btn"
+          className="timer-button"
+          onClick={onStop}
+          type="button"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem",
+          }}
+        >
+          <img src="/dch/images/stop.png" alt="" style={{ width: "32px", height: "32px" }} />
+          {t("controls.stop")}
+        </button>
+      ) : (
+        <button
+          id="start-btn"
+          className="timer-button"
+          onClick={onStart}
+          type="button"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem",
+          }}
+        >
+          <img src="/dch/images/start.png" alt="" style={{ width: "32px", height: "32px" }} />
+          {t("controls.start")}
+        </button>
+      )}
+      <button
+        id="reset-btn"
+        className="timer-button"
+        onClick={onReset}
+        type="button"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "0.5rem",
+        }}
+      >
+        <img src="/dch/images/reset.png" alt="" style={{ width: "32px", height: "32px" }} />
+        {t("controls.reset")}
+      </button>
+    </div>
+  );
 }

@@ -9,7 +9,7 @@ import SamgacchhadhamMantra from "./components/pages/SamgacchhadhamMantra";
 import MeditationPage from "./components/pages/MeditationPage";
 import NityamShuddhamMantra from "./components/pages/NityamShuddhamMantra";
 import GuruPuja from "./components/pages/GuruPuja";
-import TeachingPage from "./components/pages/TeachingPage";
+import SupremeCommand from "./components/pages/SupremeCommand";
 import Svadhyaya from "./components/pages/Svadhyaya";
 import SpiritualDiscussion from "./components/pages/SpiritualDiscussion";
 import Namaskar from "./components/pages/Namaskar";
@@ -27,7 +27,7 @@ export default function App() {
 					<Route path="meditation" element={<MeditationPage />} />
 					<Route path="nityam-shuddham-mantra" element={<NityamShuddhamMantra />} />
 					<Route path="guru-puja" element={<GuruPuja />} />
-					<Route path="teaching" element={<TeachingPage />} />
+					<Route path="teaching" element={<SupremeCommand />} />
 					<Route path="svadhyaya" element={<Svadhyaya />} />
 					<Route path="spiritual-discussion" element={<SpiritualDiscussion />} />
 					<Route path="namaskar" element={<Namaskar />} />

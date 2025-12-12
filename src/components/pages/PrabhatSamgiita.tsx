@@ -1,23 +1,30 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { usePageNavigation } from "../Layout/Navigation";
+import "./Page.css";
 
 export default function PrabhatSamgiita() {
-	const { t } = useTranslation("pages");
+  const { t } = useTranslation("pages");
 
-	usePageNavigation({ prev: "index", next: "kirtan" });
+  usePageNavigation({ prev: "index", next: "kirtan" });
 
-	return (
-		<div className="page-container">
-			<header className="page-header">
-				<img src="/dch/images/img02.png" alt="Header" />
-				<h1 className="page-title">{t("page01.title")}</h1>
-			</header>
+  return (
+    <div className="page-container">
+      <header className="page-header">
+        <h1 className="page-title">{t("page01.title")}</h1>
+        <a className="page-subtitle" href="https://psbot.eu/" target="_blank" rel="noopener noreferrer">
+          https://psbot.eu/
+        </a>
+      </header>
 
-			<main className="page-content">
-				<p>{t("page01.content.p1")}</p>
-				<p>{t("page01.content.p2")}</p>
-			</main>
-		</div>
-	);
+      <div className="page-main">
+        <div className="page-side-image">
+          <img src="/dch/images/pratik.png" alt="Pratik" />
+        </div>
+
+        <div className="page-side-image">
+          <img src="/dch/images/guru_white.jpeg" alt="Guru" />
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -2,8 +2,11 @@
 	"index": {
 		"title": "Dharmachakra",
 		"subtitle": "is about to start",
-		"welcome": "Welcome to the Dharmachakra program. The event will start soon. Please prepare for meditation and spiritual practice.",
-		"start": "Begin →"
+		"content": {
+			"p1": "Please, each DC participant,\ndon't forget to press the button",
+			"button": "'Register and get link'",
+			"p2": "in your Telegram app in the bot\n(which sends the link to DC)\nto register\nyour personal participation."
+		}
 	},
 	"page01": {
 		"title": "Prabhat Samgiita",
@@ -27,23 +30,18 @@
 		"subtitle": "(30 minutes)"
 	},
 	"page06": {
-		"title": "Nityam Shuddham",
-		"subtitle": "Guru Brahma Mantra",
-		"mantra": "Nityam shuddham nirabhasam\nNirakaankam niramjanam\nNitya bodham chidananda\nGurum Brahma namamyaham",
-		"translation": "Translation:",
-		"meaning": "To the eternal, pure, formless, spotless Brahma, eternal knowledge, consciousness and bliss, to Guru Brahma I bow."
+		"title": "Nityam Shuddham Mantra",
+		"mantra": "NITYAM SHUDDHAM NIRABHĀSAM\nNIRĀKĀRAM NIRAÑJANAM\nNITYABODHAM CIDĀNANDAM\nGURUBRAHMA NAMĀMYAHAM",
+		"meaning": "I salute the eternal, pure,\nincomprehensible, formless,\nunstained, all-knowing,\nblissful Brahma in the form of Guru."
 	},
 	"page07": {
 		"title": "Guru Puja",
-		"subtitle": "Honoring the Guru",
-		"mantra": "Guru Brahma, Guru Vishnu\nGuru Devo Maheshvarah\nGuru Sakshat Param Brahma\nTasmai Shri Gurave Namah",
-		"translation": "Translation:",
-		"meaning": "Guru is Brahma (creator), Guru is Vishnu (preserver), Guru is God Maheshvara (destroyer). Guru truly is the supreme Brahma. To that revered Guru I bow."
+		"mantra": "Akhanda mandalakaram vyaptam yena characaram\nTatpadam darshitam yena tasmai shri gurave namah\nAjnana timirāndhasya jnānānjana shalākayā\nChakṣurunmīlitam yena tasmai shri gurave namah\nGurur brahma gurur vishnu gurur devo maheshvarah\nGurureva parama brahma tasmai shri gurave namah\n\n\nTAVA DRAVYAM JAGATGURO TUBHYAMEVA SAMARPAYE",
+		"meaning": "I salute the supreme Guru who pervades this entire moving and unmoving spherical universe.\nI salute the supreme Guru who dispels the darkness and opens the eyes of knowledge with the balm of spirituality.\nGuru is the creator. Guru is the preserver. Guru is the destroyer. Guru is verily the supreme Brahma.\nI salute this supreme Guru!\n\n\nO Guru of the Universe, all that You have given me, I return to You."
 	},
 	"page08": {
-		"title": "Teaching of Shrii Shrii Anandamurti",
-		"quote": "\"Those who regularly perform sadhana twice daily will certainly attain liberation. They should follow the principles of yama and niyama according to their capacity.\"",
-		"author": "— Shrii Shrii Anandamurti"
+		"title": "Supreme Command",
+		"mantra": "\"In the mind of those who perform sadhana regularly twice a day, at the time of death, a thought\nof Parama Purusha will surely arise – they will certainly attain liberation.\nTherefore, every Ananda Margi should perform sadhana twice a day – this is the command of Parama Purusha.\n\nWithout observing yama and niyama, sadhana is impossible,\ntherefore it is necessary to strictly adhere to these principles.\nNot following this command means subjecting oneself\nto the torments of animal life for tens of millions of years.\nSo that no one experiences such suffering,\nand all may have the opportunity to enjoy\neternal peace under the loving shelter of Parama Purusha,\nevery Ananda Margi should strive to bring all onto the path of bliss.\n\nThis is an integral part of sadhana - to lead others on the path of righteousness.\"\n\n\nShrii Shrii Anandamurti"
 	},
 	"page09": {
 		"title": "Svadhyaya",

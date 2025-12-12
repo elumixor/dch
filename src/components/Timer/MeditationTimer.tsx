@@ -1,62 +1,79 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useCallback, useEffect, useState } from "react";
 import { useTimer } from "../../hooks/useTimer";
 import { playNotificationSound } from "../../utils/audio";
-import TimerDisplay from "./TimerDisplay";
-import TimerControls from "./TimerControls";
-import ProgressBar from "./ProgressBar";
 import TimerAlert from "./TimerAlert";
+import TimerControls from "./TimerControls";
+import TimerDisplay from "./TimerDisplay";
 
 interface MeditationTimerProps {
-	durationMinutes?: number;
-	title?: string;
-	subtitle?: string;
+  durationMinutes?: number;
 }
 
-export default function MeditationTimer({
-	durationMinutes = 30,
-	title,
-	subtitle,
-}: MeditationTimerProps) {
-	const { t } = useTranslation("timer");
-	const [showAlert, setShowAlert] = useState(false);
+export default function MeditationTimer({ durationMinutes = 30 }: MeditationTimerProps) {
+  const [showAlert, setShowAlert] = useState(false);
+  const [showControls, setShowControls] = useState(true);
 
-	const handleComplete = () => {
-		playNotificationSound();
-		setShowAlert(true);
-	};
+  const handleComplete = useCallback(() => {
+    playNotificationSound();
+    setShowAlert(true);
+  }, []);
 
-	const { remainingTime, isRunning, progress, start, stop, reset } = useTimer({
-		durationMinutes,
-		onComplete: handleComplete,
-	});
+  const { remainingTime, isRunning, start, stop, reset } = useTimer({
+    durationMinutes,
+    onComplete: handleComplete,
+  });
 
-	return (
-		<div className="page-container">
-			<header className="page-header">
-				<img src="/dch/images/img02.png" alt="Header" />
-				<img src="/dch/images/img03.png" alt="Header" />
-				<img
-					src="/dch/images/img_01.jpg"
-					alt="Dharma Wheel"
-					style={{ width: "120px" }}
-				/>
-				<h1 className="page-title">{title || t("title")}</h1>
-				<p className="page-subtitle">{subtitle || t("subtitle")}</p>
-			</header>
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
 
-			<main className="timer-container">
-				<TimerDisplay remainingTime={remainingTime} />
-				<ProgressBar progress={progress} />
-				<TimerControls
-					isRunning={isRunning}
-					onStart={start}
-					onStop={stop}
-					onReset={reset}
-				/>
-			</main>
+    const handleMouseMove = () => {
+      setShowControls(true);
 
-			<TimerAlert isVisible={showAlert} onClose={() => setShowAlert(false)} />
-		</div>
-	);
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => {
+        setShowControls(false);
+      }, 3000);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // Initial timeout
+    timeoutId = setTimeout(() => {
+      setShowControls(false);
+    }, 3000);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  return (
+    <>
+      <footer
+        className="timer-footer"
+        style={{
+          padding: "2rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "1rem",
+        }}
+      >
+        <TimerDisplay remainingTime={remainingTime} />
+        <div
+          style={{
+            transition: "opacity 0.3s ease",
+            opacity: showControls ? 1 : 0,
+            pointerEvents: showControls ? "auto" : "none",
+          }}
+        >
+          <TimerControls isRunning={isRunning} onStart={start} onStop={stop} onReset={reset} />
+        </div>
+      </footer>
+
+      <TimerAlert isVisible={showAlert} onClose={() => setShowAlert(false)} />
+    </>
+  );
 }

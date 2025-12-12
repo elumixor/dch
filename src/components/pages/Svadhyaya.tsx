@@ -1,32 +1,35 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { usePageNavigation } from "../Layout/Navigation";
+import "./Page.css";
 
 export default function Svadhyaya() {
-	const { t } = useTranslation("pages");
+  const { t } = useTranslation("pages");
 
-	usePageNavigation({ prev: "teaching", next: "spiritual-discussion" });
+  usePageNavigation({ prev: "teaching", next: "spiritual-discussion" });
 
-	return (
-		<div className="page-container">
-				<header className="page-header">
-					<h1 className="page-title">{t("page09.title")}</h1>
-					<p className="page-subtitle">{t("page09.subtitle")}</p>
-				</header>
+  return (
+    <div className="page-container">
+      <header className="page-header">
+        <h1 className="page-title">{t("page09.title")}</h1>
+        <a
+          className="page-subtitle"
+          href="https://t.me/joinchat/sf2G1QKUp5RiNjRi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://t.me/joinchat/sf2G1QKUp5RiNjRi
+        </a>
+      </header>
 
-				<main className="page-content">
-					<p>{t("page09.content.p1")}</p>
-					<p>{t("page09.content.p2")}</p>
-					<p
-						style={{
-							textAlign: "center",
-							marginTop: "3rem",
-							fontSize: "1.1em",
-						}}
-					>
-						<em>{t("page09.content.quote")}</em>
-					</p>
-				</main>
-			</div>
-	);
+      <div className="page-main">
+        <div className="page-side-image">
+          <img src="/dch/images/pratik.png" alt="Pratik" />
+        </div>
+
+        <div className="page-side-image">
+          <img src="/dch/images/guru_white.jpeg" alt="Guru" />
+        </div>
+      </div>
+    </div>
+  );
 }
