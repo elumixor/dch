@@ -1,0 +1,55 @@
+/* Typography System - Unified font styles */
+
+:root {
+  /* Font sizes */
+  --font-size-title: 2rem;
+  --font-size-mantra: 1.25rem;
+  --font-size-regular: 1.1rem;
+
+  /* Font weights */
+  --font-weight-title: 700;
+  --font-weight-mantra: 500;
+  --font-weight-regular: 500;
+
+  /* Line heights */
+  --line-height-title: 1.2;
+  --line-height-mantra: 1.2;
+  --line-height-regular: 1.2;
+
+  /* Text shadows */
+  --text-shadow-color: rgba(0, 0, 0, 0.3);
+  --text-shadow-blur: 4px;
+  --text-shadow: 0 2px var(--text-shadow-blur) var(--text-shadow-color);
+}
+
+/* Title Font Style - Used for page headings */
+.font-title {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-title);
+  line-height: var(--line-height-title);
+  text-shadow: var(--text-shadow);
+}
+
+/* Mantra Font Style - Used for mantras and timer counter */
+.font-mantra {
+  font-size: var(--font-size-mantra);
+  font-weight: var(--font-weight-mantra);
+  line-height: var(--line-height-mantra);
+  text-shadow: var(--text-shadow);
+}
+
+/* Regular Text - Used for translations, subtitles, links, buttons */
+.font-regular {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+  text-shadow: var(--text-shadow);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --font-size-title: 1.5rem;
+    --font-size-mantra: 1.1rem;
+  }
+}

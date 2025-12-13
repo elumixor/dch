@@ -11,23 +11,23 @@ export default function IndexPage() {
   return (
     <div className="page-container">
       <header className="page-header">
-        <h1 className="page-title">{t("index.title")}</h1>
-        <p className="page-subtitle">{t("index.subtitle")}</p>
+        <h1 className="page-title font-title">{t("index.title")}</h1>
+        <p className="page-subtitle font-regular">{t("index.subtitle")}</p>
       </header>
 
       <div className="page-main">
         <main className="page-content">
-          <p style={{ whiteSpace: "pre-line" }}>{t("index.content.p1")}</p>
+          <p className="font-regular" style={{ whiteSpace: "pre-line" }}>{t("index.content.p1")}</p>
           <p
+            className="font-mantra"
             style={{
               textAlign: "center",
-              fontSize: "1.3em",
               margin: "1.5rem 0",
             }}
           >
             <strong>{t("index.content.button")}</strong>
           </p>
-          <p style={{ whiteSpace: "pre-line" }}>{t("index.content.p2")}</p>
+          <p className="font-regular" style={{ whiteSpace: "pre-line" }}>{t("index.content.p2")}</p>
         </main>
       </div>
     </div>

@@ -12,7 +12,8 @@
 /* Timer display */
 .timer-display {
 	font-size: 6rem;
-	font-weight: 300;
+	font-weight: var(--font-weight-mantra);
+	line-height: var(--line-height-mantra);
 	color: var(--primary-color);
 	font-variant-numeric: tabular-nums;
 	letter-spacing: 0.1em;

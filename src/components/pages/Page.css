@@ -1,4 +1,16 @@
 /* Common page styles shared across content pages */
+:root {
+  --image-drop-shadow: drop-shadow(2px 0 white)
+                       drop-shadow(-2px 0 white)
+                       drop-shadow(0 2px white)
+                       drop-shadow(0 -2px white)
+                       drop-shadow(2px 2px white)
+                       drop-shadow(-2px -2px white)
+                       drop-shadow(2px -2px white)
+                       drop-shadow(-2px 2px white);
+  --guru-border-radius: 15px;
+}
+
 .page-container {
   width: 100%;
   min-height: 100vh;
@@ -19,13 +31,10 @@
 }
 
 .page-title {
-  font-size: 2rem;
-  font-weight: 600;
   color: #ffffff;
 }
 
 .page-subtitle {
-  font-size: 1.2rem;
   color: #ffffff;
 }
 
@@ -52,6 +61,12 @@
   max-width: 100%;
   height: auto;
   max-height: 50vh;
+  filter: var(--image-drop-shadow);
+}
+
+/* Guru image (last side image) */
+.page-side-image:last-child img {
+  border-radius: var(--guru-border-radius);
 }
 
 .page-content {

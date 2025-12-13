@@ -41,7 +41,7 @@ export default function MeditationPage() {
   return (
     <div className="page-container" style={{ cursor: hideCursor ? "none" : "auto" }}>
       <header className="page-header">
-        <h1 className="page-title">{t("page05.title")}</h1>
+        <h1 className="page-title font-title">{t("page05.title")}</h1>
       </header>
 
       <div className="page-main">

@@ -10,9 +10,9 @@ export default function Svadhyaya() {
   return (
     <div className="page-container">
       <header className="page-header">
-        <h1 className="page-title">{t("page09.title")}</h1>
+        <h1 className="page-title font-title">{t("page09.title")}</h1>
         <a
-          className="page-subtitle"
+          className="page-subtitle font-regular"
           href="https://t.me/joinchat/sf2G1QKUp5RiNjRi"
           target="_blank"
           rel="noopener noreferrer"

@@ -7,7 +7,7 @@ export default function Mantra(props: { headingKey: string; linesKey: string; me
   return (
     <div className="page-container">
       <header className="page-header">
-        <h1 className="page-title">{t(props.headingKey)}</h1>
+        <h1 className="page-title font-title">{t(props.headingKey)}</h1>
       </header>
 
       <div className="page-main">
@@ -17,11 +17,10 @@ export default function Mantra(props: { headingKey: string; linesKey: string; me
 
         <main className="page-content">
           <h2
+            className="font-mantra"
             style={{
               whiteSpace: "pre-line",
               textAlign: "center",
-              fontWeight: "500",
-              lineHeight: 1.2,
             }}
           >
             {t(props.linesKey)}
@@ -30,6 +29,7 @@ export default function Mantra(props: { headingKey: string; linesKey: string; me
             <>
               <br />
               <p
+                className="font-regular"
                 style={{
                   whiteSpace: "pre-line",
                 }}

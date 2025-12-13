@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import { useTimer } from "../../hooks/useTimer";
 import { playNotificationSound } from "../../utils/audio";
 import TimerControls from "./TimerControls";
-import TimerDisplay from "./TimerDisplay";
 import TimerOverlay from "./TimerOverlay";
+import { formatTime } from "../../utils/formatTime";
 
 interface MeditationTimerProps {
   durationMinutes?: number;
@@ -63,7 +63,7 @@ export default function MeditationTimer({ durationMinutes = 30 }: MeditationTime
           gap: "1rem",
         }}
       >
-        <TimerDisplay remainingTime={remainingTime} />
+        <h1 id="timer-display">{formatTime(remainingTime)}</h1>
         <div
           style={{
             transition: "opacity 0.3s ease",

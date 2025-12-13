@@ -6,6 +6,9 @@
 @import "@fontsource/roboto/500.css"; /* Medium */
 @import "@fontsource/roboto/700.css"; /* Bold */
 
+/* Import Typography System */
+@import "./typography.css";
+
 /* CSS Reset */
 *,
 *::before,

@@ -9,11 +9,7 @@
     }
   },
   "page01": {
-    "title": "Prabhat Samgiita",
-    "content": {
-      "p1": "Prabhat Samgiita are spiritual songs composed by Shrii Shrii Anandamurti. They carry deep spiritual meaning and aid in meditative practice.",
-      "p2": "These songs combine music, poetry, and philosophy, creating a unique path for spiritual development."
-    }
+    "title": "Prabhat Samgiita"
   },
   "page02": {
     "title": "Kiirtan"
@@ -21,7 +17,6 @@
   "page03": {
     "title": "Mantra \"Saḿgacchadhvaḿ\"",
     "mantra": "Saḿgacchadhvaḿ saḿvadadhvaḿ\nsaḿ vo manáḿsi jánatám;\nDevábhágaḿ yathápúrve\nsaḿjánáná upásate.\nSamánii va ákútih samáná hrdayánivah;\nsamáná hrdayánivah;\nSamánamastu vo mano\nyathá vah susahásati.",
-    "translation": "Translation:",
     "meaning": "Let us move together, let us radiate the same thought-wave,\nlet us come to know our minds together,\nLet us share our wealth without differentiation, like sages of the past,\nso that all may enjoy the universe.\nLet our aspirations be united, let our hearts be inseparable,\nLet our minds be as one mind, so that we live in harmony and become one with the Supreme."
   },
   "page05": {
@@ -42,21 +37,12 @@
     "mantra": "\"Those who perform sadhana twice a day regularly – the thought of Parama Purusa will certainly arise in their minds at time of death;\ntheir liberation is a sure guarantee.\nTherefore every Ananda Margi will have to perform sadhana twice a day invariably; verily is this the command of the Lord.\n\nWithout Yama and Niyama, sadhana is an impossibility;\nhence the Lord's command is also to follow Yama and Niyama.\nDisobedience to this command is nothing but to throw oneself\ninto the tortures of animal life for crores of years.\nThat no one should undergo torments such as these,\nthat everyone might be enjoy\nthe eternal blessedness under the loving shelter of the Lord,\n it is the bounden duty of every Ananda Margi to endeavor to bring all to the path of bliss.\n\nVerily is this a part and parcel of sadhana, to lead others along the path of righteousness.\"\n\n\nShrii Shrii Anandamurti"
   },
   "page09": {
-    "title": "Svadhyaya",
-    "subtitle": "Study of Spiritual Texts",
-    "content": {
-      "p1": "Svadhyaya (self-study) is the second niyama in the yoga system. It includes the study of spiritual literature, sacred texts, and reflection on their meaning.",
-      "p2": "Through svadhyaya, the practitioner deepens their understanding of spiritual principles and approaches the realization of their true nature. It is not just reading, but deep immersion in spiritual knowledge.",
-      "quote": "Knowledge liberates, ignorance binds"
-    }
+    "title": "Svadhyaya"
   },
   "page10": {
     "title": "Pravacan (spiritual discourse)"
   },
   "page11": {
-    "title": "Namaskar",
-    "content": {
-      "intro": "Namaskar"
-    }
+    "title": "Namaskar"
   }
 }
