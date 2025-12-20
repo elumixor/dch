@@ -54,7 +54,6 @@ export default function MeditationPage() {
         style={{
           marginTop: "3rem",
           marginBottom: "-2rem",
-          opacity: 0.5,
         }}
       >
         {t("page05.title")}

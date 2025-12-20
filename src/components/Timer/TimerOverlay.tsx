@@ -7,7 +7,6 @@ export default function TimerOverlay({ progress }: TimerOverlayProps) {
     <div
       className="timer-overlay"
       style={{
-        display: "none", // requested from Didi
         position: "fixed",
         bottom: 0,
         left: 0,

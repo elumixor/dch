@@ -55,7 +55,6 @@ export default function KirtanPage() {
         style={{
           marginTop: "3rem",
           marginBottom: "-2rem",
-          opacity: 0.5,
         }}
       >
         {t("page02.title")}
